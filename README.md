@@ -1,2 +1,2 @@
 # Classroom-App-Backend
-A classroom app creted for online assessment and management of classes and assignments.
+A classroom app created for online assessment and management of classes and assignments.
