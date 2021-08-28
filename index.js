@@ -5,6 +5,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const authRoute = require('./routes/auth');
 
 // admin:
 // username : Rahul | password : 12345
@@ -23,6 +24,7 @@ mongoose
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));
+app.use('/auth', authRoute);
 
 
 app.listen('4000', () => {
