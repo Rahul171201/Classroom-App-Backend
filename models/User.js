@@ -8,6 +8,10 @@ const userSchema = new mongoose.Schema({
         max: 30,
         unique: true
     },
+    loginType : {
+        type: String,
+        required: true
+    },
     password: {
         type: String,
         required: true,
@@ -19,9 +23,12 @@ const userSchema = new mongoose.Schema({
     },
     userId: {
         type: String
+    },
+    subjects: {
+        type: Array,
+        default: []
     }
 }, { timestamps: true });
 
 const User = mongoose.model("User", userSchema);
-
 module.exports = User;

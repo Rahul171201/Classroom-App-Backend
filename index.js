@@ -6,7 +6,8 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const authRoute = require('./routes/auth');
-
+const studentRoute = require('./routes/student');
+const subjectRoute = require('./routes/subject');
 // admin:
 // username : Rahul | password : 12345
 
@@ -25,6 +26,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));
 app.use('/auth', authRoute);
+app.use('/student', studentRoute);
+app.use('/subject', subjectRoute);
 
 
 app.listen('4000', () => {
